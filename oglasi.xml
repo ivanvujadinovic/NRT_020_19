@@ -3,7 +3,11 @@
 <Oglasnik xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com adresar.xsd">
 	<Oglas>
 		<Kategorija>Tehnika</Kategorija>
-		<DatumIsteka>2022-09-24</DatumIsteka>
+		<DatumIsteka>
+            <Dan>10</Dan>
+            <Mesec>10</Mesec>
+            <Godina>2022</Godina>
+        </DatumIsteka>
 		<Cena tip="din">17500</Cena>
 		<TekstOglasa>Najbolji televizor na trzistu.</TekstOglasa>
 		<Oznaka>
@@ -16,7 +20,11 @@
 	</Oglas>
 	<Oglas>
 		<Kategorija>Odeca</Kategorija>
-		<DatumIsteka>2022-07-24</DatumIsteka>
+		<DatumIsteka>
+            <Dan>10</Dan>
+            <Mesec>10</Mesec>
+            <Godina>2022</Godina>
+        </DatumIsteka>
 		<Cena tip="eur">75</Cena>
 		<TekstOglasa>Nike air max patike.</TekstOglasa>
 		<Oznaka>
@@ -27,7 +35,11 @@
 	</Oglas>
 	<Oglas>
 		<Kategorija>Tehnika</Kategorija>
-		<DatumIsteka>2022-09-24</DatumIsteka>
+		<DatumIsteka>
+            <Dan>10</Dan>
+            <Mesec>10</Mesec>
+            <Godina>2022</Godina>
+        </DatumIsteka>
 		<Cena>37500</Cena>
 		<TekstOglasa>Plazma televizor.</TekstOglasa>
 		<Oznaka>
