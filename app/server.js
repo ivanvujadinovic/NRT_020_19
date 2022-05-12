@@ -63,30 +63,6 @@ app.get("/oglasi/filter/:filter", function (req, res) {
     res.json(filtriraniOglasi);
 });
 
-app.get("/oglasi/sort/:kriterijum", function(req, res) {
-    var oglasiSort = [];
-
-    oglasi.forEach(oglas => {
-        oglasiSort.push(oglas)
-    });
-
-    var kriterijumSort = req.params.kriterijum;
-    var sortOrder = 1;
-
-    if (kriterijumSort[0] == '-') {
-        sortOrder = -1;
-        kriterijumSort = kriterijumSort.substring(1);
-    }
-
-    oglasiSort.sort((a,b) =>{
-        let result = a[kriterijumSort] < b[kriterijumSort]?-1: a[kriterijumSort]>b[kriterijumSort]? 1:0
-        return result*sortOrder;
-    })
-
-    res.json(oglasiSort);
-
-});
-
 app.post('/oglasi', function (req, res) {//kreiranje
     res.set("Access-Control-Allow-Origin", "*");
     var oglas = {};
