@@ -1,0 +1,17 @@
+<!ELEMENT Oglasnik (Oglas+)>
+
+<!ELEMENT Oglas ((Kategorija+), DatumIsteka, Cena, TekstOglasa, Oznaka, (Email+))
+
+<!ELEMENT Oznaka ((Tag*))>
+
+<!ELEMENT Kategorija (#PCDATA)>
+
+<!ELEMENT DatumIsteka (#PCDATA)>
+
+<!ELEMENT Cena (#PCDATA)>
+<!ATTLIST Cena tip (eur|din) "din">
+
+<!ELEMENT Tag (#PCDATA)>
+
+<!ELEMENT Email (#PCDATA)>
+<!ATTLIST Email tip (privatni|sluzbeni) #REQUIRED>
