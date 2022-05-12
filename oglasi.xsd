@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="oglasi" xmlns:xs="oglasi">
+  <xs:element name="Oglasnik">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Oglas" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Kategorija"/>
+              <xs:element name="DatumIzrade">
+                <xs:complexType>
+                <xs:sequence>
+                    <xs:element ref="Dan" />
+                    <xs:element ref="Mesec" />
+                    <xs:element ref="Godina" />
+                </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Dan">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                    <xs:pattern value="[1-9]|[[1-2][0-9]|3[0-1]"/>
+                    </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mesec">
+                <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                    <xs:pattern value="[1-9]|1[0-2]"/>
+                </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Godina" type="xs:string" />
+              <xs:element name="Cena" type="xsd:nonNegativeInteger">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:nonNegativeInteger">
+                      <xs:attribute type="xs:string" name="tip" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="TekstOglasa">
+                <xs:restriction base="xs:string">
+                    <xs:minLength value="10"/>
+                    <xs:maxLength value="180"/>
+                </xs:restriction>
+              </xs:element>
+              <xs:element name="Oznaka">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="Tag" maxOccurs="unbounded" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Email" maxOccurs="unbounded" minOccurs="1">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="restrictEmail">
+                        <xs:attribute name="tip" use="required">
+                            <xs:simpleType>
+                            <xs:restriction base="xs:NMTOKEN">
+                                <xs:enumeration value="privatni" />
+                                <xs:enumeration value="sluzbeni" />
+                            </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -6,7 +6,10 @@
 
 <!ELEMENT Kategorija (#PCDATA)>
 
-<!ELEMENT DatumIsteka (#PCDATA)>
+<!ELEMENT DatumIsteka (Dan,Mesec,Godina)>
+<!ELEMENT Dan (#PCDATA)>
+<!ELEMENT Mesec (#PCDATA)>
+<!ELEMENT Godina (#PCDATA)>
 
 <!ELEMENT Cena (#PCDATA)>
 <!ATTLIST Cena tip (eur|din) "din">
