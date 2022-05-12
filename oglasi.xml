@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE Oglasnik SYSTEM "oglasnik.dtd">
+<Oglasnik xmlns="http://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3schools.com adresar.xsd">
+	<Oglas>
+		<Kategorija>Tehnika</Kategorija>
+		<DatumIsteka>2022-09-24</DatumIsteka>
+		<Cena tip="din">17500</Cena>
+		<TekstOglasa>Najbolji televizor na trzistu.</TekstOglasa>
+		<Oznaka>
+			<Tag>Tehnika</Tag>
+			<Tag>Televizor</Tag>
+			<Tag>Prodaja</Tag>
+		</Oznaka>
+		<Email tip="privatni">prodaja123@gmail.com</Email>
+		<Email tip="sluzbeni">tvservisbeograd@gmail.com</Email>
+	</Oglas>
+	<Oglas>
+		<Kategorija>Odeca</Kategorija>
+		<DatumIsteka>2022-07-24</DatumIsteka>
+		<Cena tip="eur">75</Cena>
+		<TekstOglasa>Nike air max patike.</TekstOglasa>
+		<Oznaka>
+			<Tag>Odeca</Tag>
+			<Tag>Patike</Tag>
+		</Oznaka>
+		<Email tip="privatni">prodajapatike@gmail.com</Email>
+	</Oglas>
+	<Oglas>
+		<Kategorija>Tehnika</Kategorija>
+		<DatumIsteka>2022-09-24</DatumIsteka>
+		<Cena>37500</Cena>
+		<TekstOglasa>Plazma televizor.</TekstOglasa>
+		<Oznaka>
+			<Tag>Tehnika</Tag>
+			<Tag>Televizor</Tag>
+		</Oznaka>
+		<Email tip="sluzbeni">tvservisbeograd@gmail.com</Email>
+	</Oglas>
+</Oglasnik>
